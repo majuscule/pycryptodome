@@ -242,7 +242,7 @@ class Integer(object):
         if self._i31[0] == 0:
             return 1
         limbs = (self._i31[0] >> 5) + 1
-        res = _raw_bearssl.br_i31_bit_length(self.i31 + 1, limbs)
+        res = _raw_bearssl.br_i31_bit_length(self._i31 + 1, limbs)
         return res
 
     def size_in_bytes(self):
